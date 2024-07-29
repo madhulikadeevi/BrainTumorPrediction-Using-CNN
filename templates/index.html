@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BRAIN TUMOR CLASSIFICATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background-image: url("static/images/Background.jpg");
+            background-size: 100% auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="heading">BRAIN TUMOR CLASSIFICATION</h1>
+
+        <form id="upload-form" action="/" method="POST" enctype="multipart/form-data">
+            <input id="image-input" type="file" name="image" accept=".jpg, .jpeg, .png" required>
+            <button type="submit">PREDICT TUMOR</button>
+        </form>
+
+        <div id="uploaded-image-container" class="uploaded-image-container">
+            <img id="uploaded-image" src="" alt="IMAGE PREVIEW" class="image-preview-text">
+
+        </div>
+        <br> 
+        <form action="/info" method="GET" enctype="multipart/form-data">
+        <button type="submit">KNOW MORE</button>
+        </form>
+    </div>
+
+    <script>
+        const uploadForm = document.getElementById('upload-form');
+        const imageInput = document.getElementById('image-input');
+        const uploadedImage = document.getElementById('uploaded-image');
+
+        imageInput.addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        uploadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.submit();
+        });
+    </script>
+</body>
+</html>

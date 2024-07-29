@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background-color: bisque;
+            background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Classification Result</h1>
+
+        <div class="result">
+            <!-- <img src="{{ url_for('static', filename='images/result_image.jpg') }}" alt="Result Image"> -->
+            <p>{{ class_label }}</p>
+        </div>
+
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

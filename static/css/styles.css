@@ -1,0 +1,80 @@
+.container h1 ,h2, h3, h4, h5
+{
+    font-style: Bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(7, 15, 239);
+}
+body {
+    background-image: "{{ url_for('static', filename='images/background.jpg') }}";
+    background-size: 100% auto;
+    background-color: solid;
+}
+.tab1 {
+    tab-size: 2;
+}
+.container {
+    padding: 10px 10px 10px 10px;
+    padding-left: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(175, 170, 105);
+    border-radius: 20px;
+}
+
+
+
+.heading {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+form input[type="file"] {
+    margin-right: 10px;
+}
+
+form button {
+    padding: 8px 20px;
+    background-color: rgb(10, 10, 95,0.9);
+    color: white;
+    border-color: rgb(15, 59, 220);
+    border-block-style: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.result {
+    margin-bottom: 30px;
+}
+
+.result img {
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.result p {
+    font-size: 20px;
+}
+
+a {
+    color: rgb(10, 10, 95,0.9);
+}
+
+img {
+    width: 30%;
+    height: 30%;
+}
+.image-preview-text {
+    font-family: Arial Black;
+    color: rgb(69, 7, 108); 
+    font-size: 15px; 
+    margin-top: 10px;
+    font-style: bold;
+}
+
